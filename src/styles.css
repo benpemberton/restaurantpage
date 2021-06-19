@@ -1,0 +1,47 @@
+body {
+    background-image: url('texture.jpg');
+    background-size: cover;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Viaoda Libre';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3em;
+}
+
+p {
+    font-family: 'Benne';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    
+}
+
+#background {
+    display: flex;
+    align-items: flex-end;
+    margin: auto;
+    width: auto;
+    height: 666px;
+    max-width: 1000px;
+    background-image: linear-gradient(to bottom, RGBA(0,0,0,0.0), 
+    RGBA(0,0,0,0.71)), url('restaurant.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2%;
+}
+
+#copy {
+    padding: 5%;
+    color: white;
+    bottom: 0;
+}
