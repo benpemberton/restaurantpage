@@ -1,1 +1,3 @@
-console.log('linked up');
+import { pageLoad } from './initial.js';
+
+window.onload = pageLoad();
