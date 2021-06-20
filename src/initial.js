@@ -14,14 +14,16 @@ const pageLoad = () => {
         link.setAttribute('id', `${name}`);
         link.setAttribute('class', 'tab');
 
-        link.textContent = `${name}`;
+        const capName = name.charAt(0).toUpperCase() + name.slice(1);
+
+        link.textContent = `${capName}`;
 
         tabs.appendChild(link);
     }
 
-    const menu = makeTab('Menu');
-    const home = makeTab('Home');
-    const contact = makeTab('Contact');
+    makeTab('menu');
+    makeTab('home');
+    makeTab('contact');
 
     headerDiv.appendChild(tabs);
 

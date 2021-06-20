@@ -44,20 +44,22 @@ p {
 
 #background {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     margin: auto;
     width: auto;
     height: 666px;
     max-width: 1000px;
-    background-image: linear-gradient(to bottom, RGBA(0,0,0,0.0), 
-    RGBA(0,0,0,0.71)), url('restaurant.jpg');
+    background-image: linear-gradient(to bottom, RGBA(0,0,0,0.2), 
+    RGBA(0,0,0,0.2)), url('restaurant.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 2%;
+    border-radius: 20px;
 }
 
 #copy {
+    margin: 0 10%;
     padding: 5%;
     color: white;
-    bottom: 0;
+    background-color: RGBA(0,0,0,0.75);
+    border-radius: 10px;
 }
