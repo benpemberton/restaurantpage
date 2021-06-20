@@ -1,5 +1,6 @@
 import { pageLoad } from './initial.js';
 import { menu } from './menu.js';
+import { home } from './home.js';
 
 window.onload = pageLoad();
 

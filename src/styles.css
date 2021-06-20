@@ -26,12 +26,21 @@ ul {
 }
 
 li {
-    width: 80px;
+    /* font-family: 'Benne'; */
+    font-weight: 500;
+    font-size: 1.5em;
+    width: 200px;
     text-align: center;
     margin: 0 5%;
     padding: 3% 7%;
-    background-color: grey;
+    color: white;
+    background-color: RGBA(0,0,0,0.4);
     border-radius: 50px;
+}
+
+.current {
+    background-color: RGBA(0,0,0,0.7);
+    box-shadow: 0 0 3px 4px blue;
 }
 
 p {
