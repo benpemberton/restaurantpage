@@ -1,6 +1,6 @@
-const home = () => {
-    const backgroundDiv = document.getElementById('background');
+import { backgroundDiv } from './initial.js'
 
+const home = () => {
     const copyDiv = document.createElement('div');
     copyDiv.setAttribute('id', 'copy');
    

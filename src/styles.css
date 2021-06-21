@@ -5,7 +5,7 @@ body {
 
 #header {
     max-width: 1000px;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     padding: 0 20%;
 }
 
@@ -48,11 +48,15 @@ p {
     font-weight: 400;
     font-style: normal;
     font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 2%;
     
 }
 
 #background {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     margin: auto;
     width: auto;
@@ -67,6 +71,31 @@ p {
 
 #copy {
     margin: 0 10%;
+    padding: 5%;
+    color: white;
+    background-color: RGBA(0,0,0,0.75);
+    border-radius: 10px;
+}
+
+.menu-item {
+    width: 17%;
+    margin: 0 10%;
+    padding: 2%;
+    color: white;
+    background-color: RGBA(0,0,0,0.75);
+    border-radius: 10px;
+}
+
+.menu-item p {
+    font-size: 17px;
+}
+
+.menu-item img {
+    width: 100%;
+}
+
+#contact-box {
+    margin: 0 20%;
     padding: 5%;
     color: white;
     background-color: RGBA(0,0,0,0.75);
