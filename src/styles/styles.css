@@ -1,5 +1,5 @@
 body {
-    background-image: url('texture.jpg');
+    background-image: url('../assets/texture.jpg');
     background-size: cover;
     min-width: 1000px;
 }
@@ -65,7 +65,7 @@ p {
     height: 666px;
     max-width: 1000px;
     background-image: linear-gradient(to bottom, RGBA(0,0,0,0.2), 
-    RGBA(0,0,0,0.2)), url('restaurant.jpg');
+    RGBA(0,0,0,0.2)), url('../assets/restaurant.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;

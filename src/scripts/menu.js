@@ -1,7 +1,7 @@
-import arancini from './arancini.jpeg';
-import risotto from './risotto.jpg';
-import caprese from './caprese.jpg';
-import lasagne from './lasagne.jpg';
+import arancini from '../assets/arancini.jpeg';
+import risotto from '../assets/risotto.jpg';
+import caprese from '../assets/caprese.jpg';
+import lasagne from '../assets/lasagne.jpg';
 
 const menu = () => {
     const backgroundDiv = document.getElementById('background');

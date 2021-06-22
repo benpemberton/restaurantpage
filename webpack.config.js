@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',  
   entry: {
-      index: './src/index.js',
+      index: './src/scripts/index.js',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -20,6 +20,9 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/[hash][ext][query]'
+        },
       },
       {
         test: /\.html$/i,
@@ -30,7 +33,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Restaurant Page',
-      template: "src/index.html",
+      template: "src/html/index.html",
     }),
   ],
   output: {

@@ -1,5 +1,5 @@
 import { backgroundDiv } from './initial.js'
-import border from './border.svg';
+import border from '../assets/border.svg';
 
 const home = () => {
     const homeDiv = document.createElement('div');

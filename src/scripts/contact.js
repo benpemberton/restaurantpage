@@ -1,4 +1,4 @@
-import map from './map.jpg';
+import map from '../assets/map.jpg';
 
 const contact = () => {
     const backgroundDiv = document.getElementById('background');
