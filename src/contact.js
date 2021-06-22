@@ -11,7 +11,7 @@ const contact = () => {
     }
 
     const contactDiv = document.createElement('div');
-    contactDiv.setAttribute('id', 'contact-box');
+    contactDiv.setAttribute('class', 'contact-box');
 
     const phone = document.createElement('p');
     const email = document.createElement('p');
@@ -29,6 +29,10 @@ const contact = () => {
     contactDiv.appendChild(pic);
 
     backgroundDiv.appendChild(contactDiv);
+
+    let a = backgroundDiv.offsetWidth;
+
+    contactDiv.classList.add('slide-in');
 }
 
 export { contact }

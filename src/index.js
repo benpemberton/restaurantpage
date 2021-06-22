@@ -9,22 +9,20 @@ window.onload = pageLoad();
 const tabs = document.querySelectorAll('li');
 tabs.forEach(tab => {
     tab.addEventListener('click', switchTabs);
-})
+});
 
 function switchTabs(e) {
+
     if (!(e.target.classList.contains('current'))) {
         clearContents();
 
-        e.target.classList.add('current');
-
         tabs.forEach(tab => {
-            if (tab.id !== (e.target.id) && 
-            tab.classList.contains('current')) {
-
-                tab.classList.remove('current');
-            
+            if (tab.classList.contains('current')) {
+                tab.classList.remove('current');          
             }
         });
+
+        e.target.classList.add('current');
 
         const module = e.target.id;
 
@@ -39,13 +37,29 @@ function switchTabs(e) {
                 contact();
                 break;
         }  
-
     }
 }
 
 function clearContents() {
-    const backgroundDiv = document.getElementById('background');
-    const divs = backgroundDiv.querySelectorAll('div');
+    tabs.forEach(tab => {
+        tab.style.pointerEvents = 'none';
+    });
 
-    divs.forEach(div => div.remove());
+    const backgroundDiv = document.getElementById('background');
+    const content = backgroundDiv.querySelectorAll('.slide-in');
+
+    content.forEach((item, i) => {
+        item.style.position = 'absolute';
+        item.style.transform = 'translateY(1000px)';
+
+        item.ontransitionend = () => {
+            item.remove();
+        }
+
+        if (i === content.length - 1) {
+            tabs.forEach(tab => {
+                tab.style.pointerEvents = 'auto';
+            });
+        }
+    });
 }

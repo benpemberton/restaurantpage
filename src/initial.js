@@ -16,7 +16,10 @@ const pageLoad = () => {
         const link = document.createElement('li');
 
         link.setAttribute('id', `${name}`);
-        link.setAttribute('class', 'tab');
+
+        if (name === 'home') {
+            link.setAttribute('class', 'current');
+        }
 
         const capName = name.charAt(0).toUpperCase() + name.slice(1);
 

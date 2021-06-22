@@ -1,8 +1,20 @@
 import { backgroundDiv } from './initial.js'
+import border from './border.svg';
 
 const home = () => {
+    const homeDiv = document.createElement('div');
+    homeDiv.classList.add('home-box');
+
+    const topBorder = document.createElement('img');
+    topBorder.classList.add('top-border');
+    topBorder.src = border;
+
+    const bottomBorder = document.createElement('img');
+    bottomBorder.classList.add('bot-border');
+    bottomBorder.src = border;
+
     const copyDiv = document.createElement('div');
-    copyDiv.setAttribute('id', 'copy');
+    copyDiv.setAttribute('class', 'copy');
    
     const p = document.createElement('p');
     p.innerHTML = `Oh yes indeedy! Welcome to this fancy pants 
@@ -21,7 +33,15 @@ const home = () => {
     fact, stands that person.`;
     copyDiv.appendChild(p);
 
-    backgroundDiv.appendChild(copyDiv);
+    homeDiv.appendChild(topBorder);
+    homeDiv.appendChild(copyDiv);
+    homeDiv.appendChild(bottomBorder);
+
+    backgroundDiv.appendChild(homeDiv);
+
+    let a = backgroundDiv.offsetWidth;
+
+    homeDiv.classList.add('slide-in');
 }
 
 export { home }

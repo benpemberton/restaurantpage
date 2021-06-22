@@ -5,6 +5,10 @@ import lasagne from './lasagne.jpg';
 
 const menu = () => {
     const backgroundDiv = document.getElementById('background');
+    const menuContainer = document.createElement('div');
+    menuContainer.setAttribute('class', 'menu-box');
+
+    backgroundDiv.appendChild(menuContainer);
 
     const menuItems = [
         {
@@ -37,7 +41,7 @@ const menu = () => {
 
     for (let i = 0; i < 4; i++) {
         menuDivs[i] = document.createElement('div');
-        menuDivs[i].setAttribute('class', 'menu-item');
+        menuDivs[i].classList.add('menu-item');
 
         const img = document.createElement('img');
         const h3 = document.createElement('h3');
@@ -51,8 +55,13 @@ const menu = () => {
         menuDivs[i].appendChild(h3);
         menuDivs[i].appendChild(p);
 
-        backgroundDiv.appendChild(menuDivs[i]);
+        menuContainer.appendChild(menuDivs[i]);     
     }
+
+    let a = backgroundDiv.offsetWidth;
+
+    menuContainer.classList.add('slide-in');
+
 }
 
 export { menu }
